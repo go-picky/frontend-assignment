@@ -26,3 +26,58 @@ Your task is to create a discussion page using either React.js or Next.js. This 
 - You can draw inspiration from the [Picky discussion page](https://www.gopicky.com/discussion/95315/mega-giveaway-alert-high-chance-of-winning-apply-now) or the Picky app discussion page.
 - Feel free to use any design library to enhance your UI/UX.
 - Implementing the page using Next.js with Server-Side Rendering (SSR) can earn you bonus points.
+
+### Instruction on how to run the project
+
+1. **Clone the repository**:
+
+   First, you need to clone the repository to your local machine. You can do this by running the following command in your terminal:
+
+   ```
+   git clone https://github.com/mintecr7/frontend-assignment
+   ```
+
+2. **Navigate to the project directory**:
+
+   Once the repository is cloned, navigate to the `discussion-page` directory:
+
+   ```
+   cd frontend-assignment/discussion-page
+   ```
+
+3. **Create a .env.local file**:
+
+   In the project directory, create a new file named `.env.local`. This file will hold your environment variables.
+
+4. **Add environment variables**:
+
+   Open the `.env.local` file and add the following environment variables:
+
+   ```
+   GOOGLE_CLIENT_ID=973155917612-k4suae0nercfgn46825idhc7b8m07doa.apps.googleusercontent.com
+   GOOGLE_CLIENT_SECRET=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
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your_nextauth_secret (could choose any string)
+   ```
+
+   These variables are used for Google authentication and NextAuth configuration.
+
+5. **Install the dependencies**:
+
+   Now, you need to install the project dependencies. You can do this by running the following command:
+
+   ```
+   npm install
+   ```
+
+6. **Start the development server**:
+
+   Finally, you can start the development server by running the following command:
+
+   ```
+   npm run dev
+   ```
+
+   This will start the server on `http://localhost:3000`.
+
+Now, you should be able to access the project in your web browser by navigating to `http://localhost:3000`.
