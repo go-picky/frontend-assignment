@@ -17,14 +17,14 @@ export default async function Home() {
         {session ? (
           <Link
             href="/discussion"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+            className="bg-customPink hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
           >
             Go to Discussions
           </Link>
         ) : (
           <Link
             href="/signin"
-            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+            className="bg-customPink hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
           >
             Sign In to Start
           </Link>

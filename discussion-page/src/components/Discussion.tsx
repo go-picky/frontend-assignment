@@ -11,7 +11,7 @@ interface PropData {
   viewCount: number;
   commentCount: number;
   user: User;
-  replies: Array<any>;
+  // replies: Array<any>;
   comments: Array<{
     id: number;
     content: string;
@@ -43,15 +43,17 @@ export default function Discussion({ data }: { data: PropData }) {
         </div>
       </div>
       <p className="mb-5">{data.content}</p>
-      <div
-        className={`flex cursor-pointer justify-center items-center relative w-full max-w-2xl mx-auto overflow-hidden`}
-      >
-        <Image
-          src={data.image_urls[0]}
-          width={300}
-          height={300}
-          alt={`Discussion image`}
-        />
+      <div className="flex cursor-pointer justify-start gap-1 items-center relative w-full mx-auto overflow-x-scroll">
+        {data.image_urls.map((url, index) => (
+          <Image
+            key={index}
+            src={url}
+            width={300}
+            height={300}
+            alt={`Discussion image ${index + 1}`}
+            className="flex-shrink-0"
+          />
+        ))}
       </div>
       <div className="flex gap-7 mt-2 text-sm text-gray-500 mb-4">
         <span className="flex gap-3">

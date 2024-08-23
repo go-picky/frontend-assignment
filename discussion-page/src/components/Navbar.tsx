@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="fixed z-50 bg-gray-200 text-black p-3 w-screen">
       <div className="container mx-auto flex justify-between items-center ">
-        <Link href="/" className="text-4xl font-bold text-customPink">
+        <Link href="/" className="text-4xl mr-2 font-bold text-customPink">
           picky
         </Link>
         <div className="hidden md:flex space-x-4 items-center w-869">
@@ -37,31 +37,15 @@ export default function Navbar() {
           </Link>
           <Link
             href="/join"
-            className="text-pink-500 hover:text-pink-700"
-            style={{
-              color: "#F06384",
-              fontWeight: 600,
-              fontSize: "16px",
-            }}
+            className="text-customPink font-semibold text-[16px] hover:text-pink-700"
           >
             join picky plus
           </Link>
           <div className="relative ml-12">
             <input
               type="text"
-              style={{
-                width: "270px",
-                backgroundColor: "white",
-                paddingTop: "0.5rem",
-                paddingBottom: "0.5rem",
-                paddingLeft: "2.5rem",
-                paddingRight: "1rem",
-                outline: "none",
-                borderColor: "rgba(107, 114, 128, 1)",
-                borderWidth: "1px",
-              }}
               placeholder="Products, brands, discussions"
-              className="placeholder-gray-500 text-sm p-2 rounded-full"
+              className="placeholder-gray-500 w-[270px] py-2 pl-10 pr-4 outline-none border border-customGray bg-white text-sm p-2 rounded-full"
             />
             <Image
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
@@ -74,11 +58,10 @@ export default function Navbar() {
         </div>
         <div>
           {session ? (
-            <div className="flex w-fit items-center space-x-4 bg-red-500  hover:bg-red-600">
+            <div className="flex overflow-hidden rounded w-fit items-center space-x-4 bg-red-500 hover:bg-red-600">
               <button
                 onClick={() => signOut()}
-                style={{ backgroundColor: "#F06384", width: "fit-content" }}
-                className="text-white px-4 py-2 rounded "
+                className="text-white px-4 py-2 bg-customPink hover:bg-pink-700 rounded"
               >
                 Logout
               </button>
@@ -86,8 +69,7 @@ export default function Navbar() {
           ) : (
             <Link
               href="/signin"
-              style={{ backgroundColor: "#F06384", width: "fit-content" }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+              className="bg-customPink whitespace-nowrap hover:bg-pink-700 text-white px-4 py-2 rounded"
             >
               Sign In
             </Link>

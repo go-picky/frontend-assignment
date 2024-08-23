@@ -16,11 +16,10 @@ module.exports = {
       },
       colors: {
         customPink: "#E76E85",
-      },
-    },
-    colors: {
-      gray: {
-        200: "#f3f4f6",
+        gray: {
+          200: "#f3f4f6",
+        },
+        customGray: "rgba(107, 114, 128, 1)",
       },
     },
   },
