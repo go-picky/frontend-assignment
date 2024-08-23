@@ -53,13 +53,6 @@ Your task is to create a discussion page using either React.js or Next.js. This 
 
    Open the `.env.local` file and add the following environment variables:
 
-   ```
-   GOOGLE_CLIENT_ID=973155917612-k4suae0nercfgn46825idhc7b8m07doa.apps.googleusercontent.com
-   GOOGLE_CLIENT_SECRET=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
-   NEXTAUTH_URL=http://localhost:3000
-   NEXTAUTH_SECRET=your_nextauth_secret (could choose any string)
-   ```
-
    These variables are used for Google authentication and NextAuth configuration.
 
 5. **Install the dependencies**:
