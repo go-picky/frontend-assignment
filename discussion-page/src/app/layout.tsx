@@ -16,6 +16,10 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/icon-picky@3x.png" />
+      </head>
+      <title>Picky</title>
       <body className={inter.className}>
         <SessionProvider>
           <Navbar />

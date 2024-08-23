@@ -6,7 +6,23 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        221: "221px",
+        869: "869px",
+      },
+      minWidth: {
+        221: "221px",
+      },
+      colors: {
+        customPink: "#E76E85",
+      },
+    },
+    colors: {
+      gray: {
+        200: "#f3f4f6",
+      },
+    },
   },
   plugins: [],
 };
