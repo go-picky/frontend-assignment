@@ -26,7 +26,7 @@ export default function SignIn() {
         <button
           onClick={handleSignIn}
           disabled={isLoading}
-          className="w-full flex items-center justify-center space-x-2 bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className="w-full flex items-center justify-center space-x-2 bg-customPink text-white py-3 rounded-lg hover:bg-pink-700  transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         >
           <svg
             className="w-5 h-5"
