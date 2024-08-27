@@ -10,8 +10,6 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async session({ session, token }) {
-      console.log(token);
-      console.log(session);
       if (session.user) {
         session.user.name = token.sub!;
       }

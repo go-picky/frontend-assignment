@@ -6,6 +6,8 @@ import { useSession, signOut } from "next-auth/react";
 export default function Navbar() {
   const { data: session } = useSession();
 
+  console.log(session?.user);
+
   return (
     <nav className="fixed z-50 bg-gray-200 text-black p-3 w-screen">
       <div className="container mx-auto flex justify-between items-center ">
@@ -30,13 +32,13 @@ export default function Navbar() {
           </Link>
           <Link
             href="https://creatorsapp.gopicky.com/sign-up"
-            target="_blank"
             className="text-black hover:text-pink-500"
           >
             picky for creators
           </Link>
           <Link
-            href="/join"
+            href="https://picky.notion.site/Picky-Plus-Creators-Program-Overview-Membership-Benefits-Rules-932af58f7d4841baba8c4eb6b564334c"
+            target="_blank"
             className="text-customPink font-semibold text-[16px] hover:text-pink-700"
           >
             join picky plus

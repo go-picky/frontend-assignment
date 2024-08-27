@@ -1,6 +1,10 @@
+"use client";
+
 import Comment from "./Comment";
 import Image from "next/image";
 import { User } from "@/types";
+import { useState } from "react";
+import ImageModal from "./imageModal";
 
 interface PropData {
   id: number;
@@ -25,6 +29,18 @@ interface PropData {
 }
 
 export default function Discussion({ data }: { data: PropData }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const handleImageClick = (index: number) => {
+    setSelectedImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="bg-white w-full border-2 border-gray-300 md:max-w-4xl shadow-md rounded-lg p-6 mt-0 md:mt-2">
       <h2 className="text-2xl font-semibold mb-4">{data.title}</h2>
@@ -52,9 +68,17 @@ export default function Discussion({ data }: { data: PropData }) {
             height={300}
             alt={`Discussion image ${index + 1}`}
             className="flex-shrink-0"
+            onClick={() => handleImageClick(index)}
           />
         ))}
       </div>
+      {isModalOpen && (
+        <ImageModal
+          imageUrls={data.image_urls}
+          initialIndex={selectedImageIndex}
+          onClose={closeModal}
+        />
+      )}
       <div className="flex gap-7 mt-2 text-sm text-gray-500 mb-4">
         <span className="flex gap-3">
           <Image
