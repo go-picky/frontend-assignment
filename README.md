@@ -1,28 +1,81 @@
-# Frontend Assignment: Discussion Page
+<p align="center">
+<img src="https://media.gopicky.com/logo.png" width="50%" alt="picky-app logo" />
+</p>
 
-## Assessment Instructions
+# Image Management & Compression Mini-App
 
-### Overview
+## Overview
 
-Your task is to create a discussion page using either React.js or Next.js. This page will display discussion content using provided JSON data. The design and features are up to your creativity but should ensure a good user experience across different devices.
+Your task is to create a simple image management application using **Next.js**. This application will allow users to upload an image, preview it, and receive a compressed version. The focus of this assignment is to assess your ability to leverage Next.js for both front-end and API functionality while adhering to the constraints laid out below. The implementation details—including design, architecture, and choice of libraries—are left up to you.
 
-### Instructions
+## Constraints & Requirements
 
-1. Use React.js or Next.js to build the discussion page, you are free to design the page however you want.
+### 1. API Constraints
 
-2. Use the JSON data provided in the folders to populate the page with discussion content.
+**API Routes:**
 
-3. Interface images are supplied locally. Make sure to integrate them into your design.
+- Use Next.js API routes to handle backend functionality.
 
-4. Discussion content images are given as URLs within the data. Ensure these images are displayed correctly.
+**Image Handling:**
 
-5. The page must be responsive and provide a good user experience on Desktop, Tablet, and Mobile devices.
+- Provide an endpoint that accepts an image file upload.
+- Include an endpoint to compress an image and return the resulting file.
 
-6. Give us instructions for how to run your app.
+**Data Management:**
 
-### Additional Guidelines
+- You may use any local database (e.g., SQLite, in-memory database, or even a JSON file) to store metadata or manage records.
 
-- Add as many features as you want. Be creative and try to make the page engaging and functional.
-- You can draw inspiration from the [Picky discussion page](https://www.gopicky.com/discussion/95315/mega-giveaway-alert-high-chance-of-winning-apply-now) or the Picky app discussion page.
-- Feel free to use any design library to enhance your UI/UX.
-- Implementing the page using Next.js with Server-Side Rendering (SSR) can earn you bonus points.
+**Containerization or Easy Startup:**
+
+- Ensure the application is containerized or can be easily started using simple commands.
+
+### 2. Front-End Constraints
+
+**User Interface:**
+
+- Build a responsive UI using **Next.js** that allows users to:
+  - Select and preview an image file locally.
+  - Upload the image to your API.
+  - View both the original and compressed versions.
+
+**Design Freedom:**
+
+- The UI design, component organization, and additional features are entirely up to you.
+
+### 3. General Constraints
+
+**Project Organization:**
+
+- Organize your project with clear separation of concerns (e.g., API routes, UI components, utilities, etc.).
+
+**Error Handling & Validation:**
+
+- Implement basic error handling and input validation to maintain a smooth user experience.
+
+**AI/LLM Tool Usage:**
+
+- You may use modern AI tooling to assist in the assignment, but please provide documentation of your usage and be prepared to discuss it.
+
+**Documentation:**
+
+Include a README that details:
+
+- Setup and installation instructions.
+- Architectural decisions and reasoning.
+- Instructions to run and test the application.
+- Any assumptions or limitations.
+- Any explanations, descriptions or relevant chat logs to help understand how you used AI.
+
+### Bonus (Optional)
+
+**Enhanced Containerization:**
+
+- Provide a Dockerfile for containerizing your application.
+
+## Notes
+
+- The primary purpose of this assignment is to assess your technical skills and design choices.
+- You have the freedom to choose your tools and approach, as long as the constraints above are met.
+- Keep the scope manageable to ensure that the application can be built and demonstrated in a short time frame.
+
+Good luck, and we look forward to reviewing your solution!
